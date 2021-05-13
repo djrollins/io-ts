@@ -1131,19 +1131,10 @@ export class RefinementType<C extends Any, A = any, O = A, I = unknown> extends 
   }
 }
 
-declare const _brand: unique symbol
-
 /**
  * @since 1.8.1
  */
-export interface Brand<B> {
-  readonly [_brand]: B
-}
-
-/**
- * @since 1.8.1
- */
-export type Branded<A, B> = A & Brand<B>
+export type Branded<A, B> = A & B
 
 /**
  * @since 1.8.1
